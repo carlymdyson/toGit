@@ -3,7 +3,8 @@ function getAllBlogs() {
 	
 	//going to send a get request to the address
 	//request.open("GET", "http://localhost:8080/getAll"); 
-    request.open("GET", "http://" + location.host + ":8080" + "/getAll");
+    request.open("GET", "http://" + location.host + ":8081" + "/getAll");
+	console.log(location.host);
 	
 	// anythign to do with request.response needs to go in here(below)
 	request.onload = function() { 
@@ -60,7 +61,7 @@ function postData(form) {
 	
 	let request = new XMLHttpRequest();
 	request.open("POST", "http://localhost:8080/create");
-	//request.open("POST", "http://" + location.host + ":8080" + "/create"); 
+	//request.open("POST", "http://" + location.host + ":8081" + "/create"); 
 	// will need to insert request.setRequestHeader here (see header example tab)
 	request.setRequestHeader("Content-type","application/json");
 	request.onload = function() {
