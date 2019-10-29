@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- get script info from another file -->
+<!-- need this for bootstrap to work -->
+<head>
+  <title>Carly in Tech - Blogs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="application.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body style="height:1500px">
+
+<!-- create fixed navigation bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Carly in Tech</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li class="active"><a href="#">Blogs</a></li>
+      <li><a href="#">Vlogs</a></li>
+    </ul>
+	<div class="navbar-header">
+		<a href="https://twitter.com/carlyintech?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @carlyintech</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+
+
+  </div>
+</nav>
+ 
+<div class="container" style="margin-top:50px">
+  <h1>My blogs</h1>
+</div>
+
+<div>
+			<form onsubmit = "return postData(this)">
+			<!-- inputty name below, refers to the input name here-->
+			<input name = "blogTitle" type = "text" placeholder = "enter blog title">
+			<input name = "blogText" type = "text" placeholder = "enter blogText">
+			<input type = "submit">
+		</form>
+		<!-- create unordered list with id as 'duck list' -->
+		<div id = "blog-list">
+    </div>
+</div>
+<script type="text/javascript" src="blogPageJs.js">
+</script>
+
+</body>
+</html>
