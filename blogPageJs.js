@@ -2,10 +2,10 @@ function getAllBlogs() {
 	let request = new XMLHttpRequest();
 	
 	//going to send a get request to the address
-	//request.open("GET", "http://localhost:8080/getAll"); 
-    request.open("GET", "http://" + location.host + ":8081" + "/getAll");
+	//request.open("GET", "http://localhost:8081/getAll"); 
+    request.open("GET", "http://" + location.hostname + ":8082" + "/getAll");
 	console.log(location.host);
-	
+
 	// anythign to do with request.response needs to go in here(below)
 	request.onload = function() { 
 		// onload gets executed when it recieves the information
