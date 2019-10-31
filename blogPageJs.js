@@ -1,9 +1,9 @@
 function getAllBlogs() {	
 	let request = new XMLHttpRequest();
-	
+	console.log("hello");
 	//going to send a get request to the address
 	//request.open("GET", "http://localhost:8081/getAll"); 
-    request.open("GET", "http://" + location.hostname + ":8082" + "/getAll");
+	request.open("GET", "http://" + location.hostname + ":8082" + "/getAll");
 	console.log(location.host);
 
 	// anythign to do with request.response needs to go in here(below)
