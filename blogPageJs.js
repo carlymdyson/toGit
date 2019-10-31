@@ -60,8 +60,8 @@ function postData(form) {
 	body = JSON.stringify(body);
 	
 	let request = new XMLHttpRequest();
-	request.open("POST", "http://localhost:8080/create");
-	//request.open("POST", "http://" + location.host + ":8081" + "/create"); 
+	//request.open("POST", "http://localhost:8080/create");
+	request.open("POST", "http://" + location.hostname + ":8082" + "/create"); 
 	// will need to insert request.setRequestHeader here (see header example tab)
 	request.setRequestHeader("Content-type","application/json");
 	request.onload = function() {
