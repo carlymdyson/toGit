@@ -2,7 +2,7 @@ function getAllBlogs() {
 	let request = new XMLHttpRequest();
 	console.log("hello");
 	//going to send a get request to the address
-	//request.open("GET", "http://localhost:8081/getAll"); 
+	//request.open("GET", "http://localhost:8082/getAll"); 
 	request.open("GET", "http://" + location.hostname + ":8082" + "/getAll");
 	console.log(location.host);
 
@@ -42,6 +42,7 @@ function renderData(jsData) {
 
 function postData(form) {
 	// blank body
+	console.log("Hello2");
 	let body = {};
 
 	// form is sort of an array of inputs
@@ -60,15 +61,16 @@ function postData(form) {
 	body = JSON.stringify(body);
 	
 	let request = new XMLHttpRequest();
-	//request.open("POST", "http://localhost:8080/create");
+	//request.open("POST", "http://localhost:8082/create");
 	request.open("POST", "http://" + location.hostname + ":8082" + "/create"); 
 	// will need to insert request.setRequestHeader here (see header example tab)
 	request.setRequestHeader("Content-type","application/json");
 	request.onload = function() {
 		// callng getInfo again will refresh the page
-		getAllBlogs();
+		 getAllBlogs();
 	}
 
 	request.send(body);
+	return false;
 }
 
