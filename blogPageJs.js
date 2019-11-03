@@ -1,8 +1,8 @@
 function getAllBlogs() {	
 	let request = new XMLHttpRequest();
 	//console.log("hello");
-	request.open("GET", "http://localhost:8080/getAll"); 
-	//request.open("GET", "http://" + location.hostname + ":8082" + "/getAll");
+	//request.open("GET", "http://localhost:8080/getAll"); 
+	request.open("GET", "http://" + location.hostname + ":8082" + "/getAll");
 	//console.log(location.host);
 
 	// anythign to do with request.response needs to go in here(below)
@@ -19,8 +19,8 @@ function deleteBlogPost(id) {
 	let request = new XMLHttpRequest();
 	console.log("Gonna delete " + id);
 	//console.log("hello");
-	request.open("GET", "http://localhost:8080/delete/" + id ); 
-	//request.open("GET", "http://" + location.hostname + ":8082" + "/delete/" + id);
+	//request.open("GET", "http://localhost:8080/delete/" + id ); 
+	request.open("GET", "http://" + location.hostname + ":8082" + "/delete/" + id);
 	//console.log(location.host);
 	request.send();
 //	getAllBlogs();
@@ -41,8 +41,8 @@ function updateBlog(id, blogtitle, blogtext) {
 	//put body as equal to the stringified version of itself
 	body = JSON.stringify({'id': id, 'blogtitle' : blogtitle, 'blogtext' : blogtext})
 	let request = new XMLHttpRequest();
-	request.open("POST", "http://localhost:8080/create");
-	//request.open("POST", "http://" + location.hostname + ":8082" + "/create"); 
+	//request.open("POST", "http://localhost:8080/create");
+	request.open("POST", "http://" + location.hostname + ":8082" + "/create"); 
 	// will need to insert request.setRequestHeader here (see header example tab)
 	request.setRequestHeader("Content-type","application/json");
 	
@@ -139,8 +139,8 @@ function postData(form) {
 	body = JSON.stringify(body);
 	
 	let request = new XMLHttpRequest();
-	request.open("POST", "http://localhost:8080/create");
-	//request.open("POST", "http://" + location.hostname + ":8082" + "/create"); 
+	//request.open("POST", "http://localhost:8080/create");
+	request.open("POST", "http://" + location.hostname + ":8082" + "/create"); 
 	// will need to insert request.setRequestHeader here (see header example tab)
 	request.setRequestHeader("Content-type","application/json");
 	request.onload = function() {
